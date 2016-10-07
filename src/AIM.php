@@ -22,8 +22,6 @@ class AIM extends Controller
 
         $response_config = [];
 
-        $dataframe = null;
-
         if ($request->validate()) {
             $client = new Client();
             $response = $client->post($this->endpoint, [
@@ -31,14 +29,13 @@ class AIM extends Controller
             ]);
 
             $response_config['headers'] = $response->getHeaders();
-
-            $dataframe = new DataFrame($response->getBody()->getContents());
+            $response_config['dataframe'] = new DataFrame($response->getBody()->getContents());
         }
 
         return new AuthOnlyResponse(
             array_merge(
                 $response_config,
-                ['errors' => $request->getErrors(), 'dataframe' => $dataframe]
+                ['errors' => $request->getErrors()]
             )
         );
     }

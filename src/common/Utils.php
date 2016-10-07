@@ -2,6 +2,11 @@
 
 namespace rad8329\placetopay\common;
 
+/**
+ * Class Utils
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.NPathComplexity)
+ */
 class Utils
 {
     /**

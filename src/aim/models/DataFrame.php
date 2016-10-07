@@ -2,6 +2,11 @@
 
 namespace rad8329\placetopay\aim\models;
 
+/**
+ * Class DataFrame
+ *
+ * @SuppressWarnings(PHPMD.LongVariable)
+ */
 class DataFrame
 {
     /**

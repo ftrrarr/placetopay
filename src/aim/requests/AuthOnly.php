@@ -200,7 +200,7 @@ class AuthOnly extends Request
      */
     public function toArray(array $properties = [], $recursive = true)
     {
-        return $array = array_merge(
+        return array_merge(
             parent::toArray($properties, $recursive),
             ['x_type' => self::REQUEST_TYPE, 'x_method' => self::METHOD, 'x_card_type' => self::CARD_TYPE]
         );
