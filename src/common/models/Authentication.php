@@ -10,7 +10,7 @@ use rad8329\placetopay\common\traits\SmartObject;
  * @property string $login
  * @property string $tranKey
  * @property string $seed
- * @property string $additional
+ * @property ArrayOfAttribute $additional
  */
 class Authentication
 {
@@ -19,22 +19,22 @@ class Authentication
     /**
      * @var string
      */
-    private $_login;
+    private $login;
 
     /**
      * @var string
      */
-    private $_tranKey;
+    private $tranKey;
 
     /**
      * @var string
      */
-    private $_seed;
+    private $seed;
 
     /**
      * @var ArrayOfAttribute
      */
-    private $_additional;
+    private $additional;
 
     /**
      * Authentication constructor.
@@ -45,12 +45,12 @@ class Authentication
      */
     public function __construct($login, $tranKey, ArrayOfAttribute $additional = null)
     {
-        $this->_login = $login;
-        $this->_seed = date('c');
-        $this->_tranKey = $this->generateHashKey($tranKey);
+        $this->login = $login;
+        $this->seed = date('c');
+        $this->tranKey = $this->generateHashKey($tranKey);
 
         if ($additional) {
-            $this->_additional = $additional;
+            $this->additional = $additional;
         }
     }
 
@@ -59,7 +59,7 @@ class Authentication
      */
     protected function getLogin()
     {
-        return $this->_login;
+        return $this->login;
     }
 
     /**
@@ -67,7 +67,7 @@ class Authentication
      */
     protected function getTranKey()
     {
-        return $this->_tranKey;
+        return $this->tranKey;
     }
 
     /**
@@ -75,7 +75,7 @@ class Authentication
      */
     protected function getSeed()
     {
-        return $this->_seed;
+        return $this->seed;
     }
 
     /**
@@ -83,7 +83,7 @@ class Authentication
      */
     protected function getAdditional()
     {
-        return $this->_additional;
+        return $this->additional;
     }
 
     /**
@@ -93,6 +93,6 @@ class Authentication
      */
     private function generateHashKey($tranKey)
     {
-        return sha1($this->_seed.$tranKey, false);
+        return sha1($this->seed.$tranKey, false);
     }
 }

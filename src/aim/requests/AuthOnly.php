@@ -182,7 +182,16 @@ class AuthOnly extends Request
 
             [['x_amount', 'x_tax', 'x_amount_base'], 'number'],
             [['x_differed'], 'integer', 'min' => 1, 'max' => 36],
-            [['x_delim_data', 'x_relay_response', 'x_test_request', 'x_email_customer'], 'in', 'range' => ['TRUE', 'FALSE']],
+            [
+                [
+                    'x_delim_data',
+                    'x_relay_response',
+                    'x_test_request',
+                    'x_email_customer',
+                ],
+                'in',
+                'range' => ['TRUE', 'FALSE'],
+            ],
         ];
     }
 

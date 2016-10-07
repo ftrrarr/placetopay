@@ -4,6 +4,7 @@ namespace rad8329\placetopay\aim\responses;
 
 use rad8329\placetopay\aim\models\DataFrame;
 use rad8329\placetopay\common\exceptions\InvalidConfigException;
+use rad8329\placetopay\common\traits\Response;
 
 /**
  * Class AuthOnly.
@@ -12,13 +13,12 @@ use rad8329\placetopay\common\exceptions\InvalidConfigException;
  */
 class AuthOnly
 {
-    use \rad8329\placetopay\common\traits\Response {
-        \rad8329\placetopay\common\traits\Response::__construct as private __traitConstruct;
-    }
+    use Response;
+
     /**
      * @var DataFrame
      */
-    private $_dataframe;
+    private $dataframe;
 
     /**
      * @param array $config
@@ -27,9 +27,12 @@ class AuthOnly
      */
     public function __construct(array $config)
     {
-        $this->__traitConstruct($config);
-        if ($this->_dataframe && !$this->_dataframe instanceof DataFrame) {
-            throw new InvalidConfigException('The \'dataframe\' is not an instace of rad8329\placetopay\aim\models\DataFrame');
+        $this->configure($config);
+        
+        if ($this->dataframe && !$this->dataframe instanceof DataFrame) {
+            throw new InvalidConfigException(
+                'The \'dataframe\' is not an instace of rad8329\placetopay\aim\models\DataFrame'
+            );
         }
     }
 
@@ -38,6 +41,6 @@ class AuthOnly
      */
     protected function getDataframe()
     {
-        return $this->_dataframe;
+        return $this->dataframe;
     }
 }

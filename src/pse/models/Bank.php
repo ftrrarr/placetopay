@@ -17,16 +17,16 @@ class Bank
     /**
      * @var string
      */
-    private $_code;
+    private $code;
     /**
      * @var string
      */
-    private $_name;
+    private $name;
 
     public function __construct($bankCode, $bankName)
     {
-        $this->_code = $bankCode;
-        $this->_name = $bankName;
+        $this->code = $bankCode;
+        $this->name = $bankName;
     }
 
     /**
@@ -34,7 +34,7 @@ class Bank
      */
     protected function getCode()
     {
-        return $this->_code;
+        return $this->code;
     }
 
     /**
@@ -42,6 +42,6 @@ class Bank
      */
     protected function getName()
     {
-        return $this->_name;
+        return $this->name;
     }
 }

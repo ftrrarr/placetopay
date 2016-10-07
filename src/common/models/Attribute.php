@@ -11,12 +11,12 @@ class Attribute
     /**
      * @var string
      */
-    private $_name;
+    private $name;
 
     /**
      * @var string
      */
-    private $_value;
+    private $value;
 
     /**
      * Attribute constructor.
@@ -33,7 +33,7 @@ class Attribute
      */
     protected function getName()
     {
-        return $this->_name;
+        return $this->name;
     }
 
     /**
@@ -41,6 +41,6 @@ class Attribute
      */
     protected function getValue()
     {
-        return $this->_value;
+        return $this->value;
     }
 }

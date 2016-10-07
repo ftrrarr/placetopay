@@ -26,47 +26,47 @@ class Person
     /**
      * @var string
      */
-    private $_document;
+    private $document;
     /**
      * @var string
      */
-    private $_documentType;
+    private $documentType;
     /**
      * @var string
      */
-    private $_firstName;
+    private $firstName;
     /**
      * @var string
      */
-    private $_lastName;
+    private $lastName;
     /**
      * @var string
      */
-    private $_company;
+    private $company;
     /**
      * @var string
      */
-    private $_emailAddress;
+    private $emailAddress;
     /**
      * @var string
      */
-    private $_city;
+    private $city;
     /**
      * @var string
      */
-    private $_province;
+    private $province;
     /**
      * @var string
      */
-    private $_phone;
+    private $phone;
     /**
      * @var string
      */
-    private $_country;
+    private $country;
     /**
      * @var string
      */
-    private $_mobile;
+    private $mobile;
 
     /**
      * Person constructor.
@@ -83,7 +83,7 @@ class Person
      */
     protected function getDocument()
     {
-        return $this->_document;
+        return $this->document;
     }
 
     /**
@@ -91,7 +91,7 @@ class Person
      */
     protected function getDocumentType()
     {
-        return $this->_documentType;
+        return $this->documentType;
     }
 
     /**
@@ -99,7 +99,7 @@ class Person
      */
     protected function getFirstName()
     {
-        return $this->_firstName;
+        return $this->firstName;
     }
 
     /**
@@ -107,7 +107,7 @@ class Person
      */
     protected function getLastName()
     {
-        return $this->_lastName;
+        return $this->lastName;
     }
 
     /**
@@ -115,7 +115,7 @@ class Person
      */
     protected function getCompany()
     {
-        return $this->_company;
+        return $this->company;
     }
 
     /**
@@ -123,7 +123,7 @@ class Person
      */
     protected function getEmailAddress()
     {
-        return $this->_emailAddress;
+        return $this->emailAddress;
     }
 
     /**
@@ -131,7 +131,7 @@ class Person
      */
     protected function getCity()
     {
-        return $this->_city;
+        return $this->city;
     }
 
     /**
@@ -139,7 +139,7 @@ class Person
      */
     protected function getProvince()
     {
-        return $this->_province;
+        return $this->province;
     }
 
     /**
@@ -147,7 +147,7 @@ class Person
      */
     protected function getPhone()
     {
-        return $this->_phone;
+        return $this->phone;
     }
 
     /**
@@ -155,7 +155,7 @@ class Person
      */
     protected function getCountry()
     {
-        return $this->_country;
+        return $this->country;
     }
 
     /**
@@ -163,6 +163,6 @@ class Person
      */
     protected function getMobile()
     {
-        return $this->_mobile;
+        return $this->mobile;
     }
 }

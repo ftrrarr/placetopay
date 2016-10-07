@@ -18,20 +18,20 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function __construct(array $item)
     {
-        $this->_item = $item;
+        $this->item = $item;
     }
 
     /**
      * @var Transaction[]
      */
-    private $_item = [];
+    private $item = [];
 
     /**
      * @return Transaction[]
      */
     protected function getItem()
     {
-        return $this->_item;
+        return $this->item;
     }
 
     /**
@@ -43,7 +43,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetExists($offset)
     {
-        return isset($this->_item[$this->offSetName($offset)]);
+        return isset($this->item[$this->offSetName($offset)]);
     }
 
     /**
@@ -55,7 +55,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetGet($offset)
     {
-        return $this->_item[$this->offSetName($offset)];
+        return $this->item[$this->offSetName($offset)];
     }
 
     /**
@@ -66,7 +66,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetSet($offset, $value)
     {
-        $this->_item[$this->offSetName($offset)] = $value;
+        $this->item[$this->offSetName($offset)] = $value;
     }
 
     /**
@@ -76,7 +76,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetUnset($offset)
     {
-        unset($this->_item[$this->offSetName($offset)]);
+        unset($this->item[$this->offSetName($offset)]);
     }
 
     /**
@@ -86,7 +86,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function current()
     {
-        return current($this->_item);
+        return current($this->item);
     }
 
     /**
@@ -95,7 +95,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function next()
     {
-        next($this->_item);
+        next($this->item);
     }
 
     /**
@@ -105,7 +105,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function key()
     {
-        return key($this->_item);
+        return key($this->item);
     }
 
     /**
@@ -124,7 +124,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function rewind()
     {
-        reset($this->_item);
+        reset($this->item);
     }
 
     /**
@@ -134,7 +134,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
      */
     public function count()
     {
-        return count($this->_item);
+        return count($this->item);
     }
 
     /**

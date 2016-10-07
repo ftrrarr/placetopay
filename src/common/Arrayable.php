@@ -27,7 +27,11 @@ class Arrayable implements ArrayableInterface
     {
         $data = [];
         foreach ($this->resolveProperties($properties) as $property => $definition) {
-            $data[$property] = is_string($definition) ? $this->$definition : call_user_func($definition, $this, $property);
+            $data[$property] = is_string($definition) ? $this->$definition : call_user_func(
+                $definition,
+                $this,
+                $property
+            );
         }
 
         return $recursive ? Utils::toArray($data) : $data;

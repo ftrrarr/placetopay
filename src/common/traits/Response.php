@@ -17,12 +17,12 @@ trait Response
     /**
      * @var array
      */
-    private $_headers;
+    private $headers;
 
     /**
      * @var array
      */
-    private $_errors = [];
+    private $errors = [];
 
     /**
      * Response constructor.
@@ -35,11 +35,11 @@ trait Response
     {
         $this->configure($config);
 
-        if ($this->_headers && !is_array($this->_headers)) {
+        if ($this->headers && !is_array($this->headers)) {
             throw new InvalidConfigException("The 'headers' is not an array.");
         }
 
-        if ($this->_errors && !is_array($this->_errors)) {
+        if ($this->errors && !is_array($this->errors)) {
             throw new InvalidConfigException("The 'errors' is not an array.");
         }
     }
@@ -49,7 +49,7 @@ trait Response
      */
     protected function getHeaders()
     {
-        return $this->_headers;
+        return $this->headers;
     }
 
     /**
@@ -57,6 +57,6 @@ trait Response
      */
     protected function getErrors()
     {
-        return $this->_errors;
+        return $this->errors;
     }
 }

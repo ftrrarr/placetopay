@@ -16,9 +16,9 @@ abstract class Controller
 {
     use SmartObject;
 
-    private $_auth;
-    private $_wsdl;
-    private $_endpoint;
+    private $auth;
+    private $wsdl;
+    private $endpoint;
 
     /**
      * Operations constructor.
@@ -31,14 +31,14 @@ abstract class Controller
      */
     public function __construct(Authentication $auth, $wsdl, $endpoint)
     {
-        $this->_auth = $auth;
+        $this->auth = $auth;
 
         if (empty($wsdl)) {
             throw new \InvalidArgumentException("'wsdl' is required");
         }
 
-        $this->_wsdl = $wsdl;
-        $this->_endpoint = $endpoint;
+        $this->wsdl = $wsdl;
+        $this->endpoint = $endpoint;
     }
 
     /**
@@ -46,7 +46,7 @@ abstract class Controller
      */
     protected function getAuth()
     {
-        return $this->_auth;
+        return $this->auth;
     }
 
     /**
@@ -54,7 +54,7 @@ abstract class Controller
      */
     protected function getWsdl()
     {
-        return $this->_wsdl;
+        return $this->wsdl;
     }
 
     /**
@@ -62,6 +62,6 @@ abstract class Controller
      */
     protected function getEndpoint()
     {
-        return $this->_endpoint;
+        return $this->endpoint;
     }
 }

@@ -26,55 +26,55 @@ class TransactionInformation
     /**
      * @var string
      */
-    private $_transactionID;
+    private $transactionID;
     /**
      * @var string
      */
-    private $_sessionID;
+    private $sessionID;
     /**
      * @var string
      */
-    private $_reference;
+    private $reference;
     /**
      * @var string
      */
-    private $_requestDate;
+    private $requestDate;
     /**
      * @var string
      */
-    private $_bankProcessDate;
+    private $bankProcessDate;
     /**
      * @var string
      */
-    private $_onTest;
+    private $onTest;
     /**
      * @var string
      */
-    private $_returnCode;
+    private $returnCode;
     /**
      * @var string
      */
-    private $_trazabilityCode;
+    private $trazabilityCode;
     /**
      * @var string
      */
-    private $_transactionCycle;
+    private $transactionCycle;
     /**
      * @var string
      */
-    private $_transactionState;
+    private $transactionState;
     /**
      * @var string
      */
-    private $_responseCode;
+    private $responseCode;
     /**
      * @var string
      */
-    private $_responseReasonCode;
+    private $responseReasonCode;
     /**
      * @var string
      */
-    private $_responseReasonText;
+    private $responseReasonText;
 
     public function __construct(array $config)
     {
@@ -86,7 +86,7 @@ class TransactionInformation
      */
     protected function getTransactionID()
     {
-        return $this->_transactionID;
+        return $this->transactionID;
     }
 
     /**
@@ -94,7 +94,7 @@ class TransactionInformation
      */
     protected function getSessionID()
     {
-        return $this->_sessionID;
+        return $this->sessionID;
     }
 
     /**
@@ -102,7 +102,7 @@ class TransactionInformation
      */
     protected function getReference()
     {
-        return $this->_reference;
+        return $this->reference;
     }
 
     /**
@@ -110,7 +110,7 @@ class TransactionInformation
      */
     protected function getRequestDate()
     {
-        return $this->_requestDate;
+        return $this->requestDate;
     }
 
     /**
@@ -118,7 +118,7 @@ class TransactionInformation
      */
     protected function getBankProcessDate()
     {
-        return $this->_bankProcessDate;
+        return $this->bankProcessDate;
     }
 
     /**
@@ -126,7 +126,7 @@ class TransactionInformation
      */
     protected function getOnTest()
     {
-        return $this->_onTest;
+        return $this->onTest;
     }
 
     /**
@@ -134,7 +134,7 @@ class TransactionInformation
      */
     protected function getReturnCode()
     {
-        return $this->_returnCode;
+        return $this->returnCode;
     }
 
     /**
@@ -142,7 +142,7 @@ class TransactionInformation
      */
     protected function getTrazabilityCode()
     {
-        return $this->_trazabilityCode;
+        return $this->trazabilityCode;
     }
 
     /**
@@ -150,7 +150,7 @@ class TransactionInformation
      */
     protected function getTransactionCycle()
     {
-        return $this->_transactionCycle;
+        return $this->transactionCycle;
     }
 
     /**
@@ -158,7 +158,7 @@ class TransactionInformation
      */
     protected function getTransactionState()
     {
-        return $this->_transactionState;
+        return $this->transactionState;
     }
 
     /**
@@ -166,7 +166,7 @@ class TransactionInformation
      */
     protected function getResponseCode()
     {
-        return $this->_responseCode;
+        return $this->responseCode;
     }
 
     /**
@@ -174,7 +174,7 @@ class TransactionInformation
      */
     protected function getResponseReasonCode()
     {
-        return $this->_responseReasonCode;
+        return $this->responseReasonCode;
     }
 
     /**
@@ -182,6 +182,6 @@ class TransactionInformation
      */
     protected function getResponseReasonText()
     {
-        return $this->_responseReasonText;
+        return $this->responseReasonText;
     }
 }

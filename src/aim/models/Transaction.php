@@ -54,202 +54,202 @@ class Transaction
     /**
      * @property int
      */
-    private $_transactionID;
+    private $transactionID;
 
     /**
      * @property string
      */
-    private $_sessionID;
+    private $sessionID;
 
     /**
      * @property string
      */
-    private $_reference;
+    private $reference;
 
     /**
      * @property string
      */
-    private $_requestDate;
+    private $requestDate;
 
     /**
      * @property string
      */
-    private $_bankProcessDate;
+    private $bankProcessDate;
 
     /**
      * @property bool
      */
-    private $_onTest;
+    private $onTest;
 
     /**
      * @property string
      */
-    private $_description;
+    private $description;
 
     /**
      * @property string
      */
-    private $_currency;
+    private $currency;
 
     /**
      * @property float
      */
-    private $_totalAmount;
+    private $totalAmount;
 
     /**
      * @property float
      */
-    private $_taxAmount;
+    private $taxAmount;
 
     /**
      * @property float
      */
-    private $_devolutionBase;
+    private $devolutionBase;
 
     /**
      * @property float
      */
-    private $_tipAmount;
+    private $tipAmount;
 
     /**
      * @property int
      */
-    private $_airline;
+    private $airline;
 
     /**
      * @property float
      */
-    private $_serviceFee;
+    private $serviceFee;
 
     /**
      * @property float
      */
-    private $_serviceFeeTax;
+    private $serviceFeeTax;
 
     /**
      * @property float
      */
-    private $_serviceFeeBase;
+    private $serviceFeeBase;
 
     /**
      * @property Person
      */
-    private $_payer;
+    private $payer;
 
     /**
      * @property Person
      */
-    private $_buyer;
+    private $buyer;
 
     /**
      * @property Person
      */
-    private $_shipping;
+    private $shipping;
 
     /**
      * @property string
      */
-    private $_ipAddress;
+    private $ipAddress;
 
     /**
      * @property string
      */
-    private $_userAgent;
+    private $userAgent;
 
     /**
      * @property string
      */
-    private $_franchise;
+    private $franchise;
 
     /**
      * @property string
      */
-    private $_franchiseName;
+    private $franchiseName;
 
     /**
      * @property string
      */
-    private $_bankName;
+    private $bankName;
 
     /**
      * @property string
      */
-    private $_bankCurrency;
+    private $bankCurrency;
 
     /**
      * @property float
      */
-    private $_bankFactor;
+    private $bankFactor;
 
     /**
      * @property string
      */
-    private $_authorization;
+    private $authorization;
 
     /**
      * @property string
      */
-    private $_receipt;
+    private $receipt;
 
     /**
      * @property bool
      */
-    private $_refunded;
+    private $refunded;
 
     /**
      * @property string
      */
-    private $_transactionState;
+    private $transactionState;
 
     /**
      * @property int
      */
-    private $_responseCode;
+    private $responseCode;
 
     /**
      * @property string
      */
-    private $_responseReasonCode;
+    private $responseReasonCode;
 
     /**
      * @property string
      */
-    private $_responseReasonText;
+    private $responseReasonText;
 
     /**
      * @property string
      */
-    private $_serviceFeeTransactionState;
+    private $serviceFeeTransactionState;
 
     /**
      * @property int
      */
-    private $_serviceFeeResponseCode;
+    private $serviceFeeResponseCode;
 
     /**
      * @property string
      */
-    private $_serviceFeeResponseReasonCode;
+    private $serviceFeeResponseReasonCode;
 
     /**
      * @property string
      */
-    private $_serviceFeeResponseReasonText;
+    private $serviceFeeResponseReasonText;
 
     /**
      * @property string
      */
-    private $_serviceFeeAuthorization;
+    private $serviceFeeAuthorization;
 
     /**
      * @property string
      */
-    private $_serviceFeeReceipt;
+    private $serviceFeeReceipt;
 
     /**
      * @property ArrayOfAttribute
      */
-    private $_additional;
+    private $additional;
 
     /**
      * Transaction constructor.
@@ -266,7 +266,7 @@ class Transaction
      */
     protected function getTransactionID()
     {
-        return $this->_transactionID;
+        return $this->transactionID;
     }
 
     /**
@@ -274,7 +274,7 @@ class Transaction
      */
     protected function getSessionID()
     {
-        return $this->_sessionID;
+        return $this->sessionID;
     }
 
     /**
@@ -282,7 +282,7 @@ class Transaction
      */
     protected function getReference()
     {
-        return $this->_reference;
+        return $this->reference;
     }
 
     /**
@@ -290,7 +290,7 @@ class Transaction
      */
     protected function getRequestDate()
     {
-        return $this->_requestDate;
+        return $this->requestDate;
     }
 
     /**
@@ -298,7 +298,7 @@ class Transaction
      */
     protected function getBankProcessDate()
     {
-        return $this->_bankProcessDate;
+        return $this->bankProcessDate;
     }
 
     /**
@@ -306,7 +306,7 @@ class Transaction
      */
     protected function getOnTest()
     {
-        return $this->_onTest;
+        return $this->onTest;
     }
 
     /**
@@ -314,7 +314,7 @@ class Transaction
      */
     protected function getDescription()
     {
-        return $this->_description;
+        return $this->description;
     }
 
     /**
@@ -322,7 +322,7 @@ class Transaction
      */
     protected function getCurrency()
     {
-        return $this->_currency;
+        return $this->currency;
     }
 
     /**
@@ -330,7 +330,7 @@ class Transaction
      */
     protected function getTotalAmount()
     {
-        return $this->_totalAmount;
+        return $this->totalAmount;
     }
 
     /**
@@ -338,7 +338,7 @@ class Transaction
      */
     protected function getTaxAmount()
     {
-        return $this->_taxAmount;
+        return $this->taxAmount;
     }
 
     /**
@@ -346,7 +346,7 @@ class Transaction
      */
     protected function getDevolutionBase()
     {
-        return $this->_devolutionBase;
+        return $this->devolutionBase;
     }
 
     /**
@@ -354,7 +354,7 @@ class Transaction
      */
     protected function getTipAmount()
     {
-        return $this->_tipAmount;
+        return $this->tipAmount;
     }
 
     /**
@@ -362,7 +362,7 @@ class Transaction
      */
     protected function getAirline()
     {
-        return $this->_airline;
+        return $this->airline;
     }
 
     /**
@@ -370,7 +370,7 @@ class Transaction
      */
     protected function getServiceFee()
     {
-        return $this->_serviceFee;
+        return $this->serviceFee;
     }
 
     /**
@@ -378,7 +378,7 @@ class Transaction
      */
     protected function getServiceFeeTax()
     {
-        return $this->_serviceFeeTax;
+        return $this->serviceFeeTax;
     }
 
     /**
@@ -386,7 +386,7 @@ class Transaction
      */
     protected function getServiceFeeBase()
     {
-        return $this->_serviceFeeBase;
+        return $this->serviceFeeBase;
     }
 
     /**
@@ -394,7 +394,7 @@ class Transaction
      */
     protected function getPayer()
     {
-        return $this->_payer;
+        return $this->payer;
     }
 
     /**
@@ -402,7 +402,7 @@ class Transaction
      */
     protected function getBuyer()
     {
-        return $this->_buyer;
+        return $this->buyer;
     }
 
     /**
@@ -410,7 +410,7 @@ class Transaction
      */
     protected function getShipping()
     {
-        return $this->_shipping;
+        return $this->shipping;
     }
 
     /**
@@ -418,7 +418,7 @@ class Transaction
      */
     protected function getIpAddress()
     {
-        return $this->_ipAddress;
+        return $this->ipAddress;
     }
 
     /**
@@ -426,7 +426,7 @@ class Transaction
      */
     protected function getUserAgent()
     {
-        return $this->_userAgent;
+        return $this->userAgent;
     }
 
     /**
@@ -434,7 +434,7 @@ class Transaction
      */
     protected function getFranchise()
     {
-        return $this->_franchise;
+        return $this->franchise;
     }
 
     /**
@@ -442,7 +442,7 @@ class Transaction
      */
     protected function getFranchiseName()
     {
-        return $this->_franchiseName;
+        return $this->franchiseName;
     }
 
     /**
@@ -450,7 +450,7 @@ class Transaction
      */
     protected function getBankName()
     {
-        return $this->_bankName;
+        return $this->bankName;
     }
 
     /**
@@ -458,7 +458,7 @@ class Transaction
      */
     protected function getBankCurrency()
     {
-        return $this->_bankCurrency;
+        return $this->bankCurrency;
     }
 
     /**
@@ -466,7 +466,7 @@ class Transaction
      */
     protected function getBankFactor()
     {
-        return $this->_bankFactor;
+        return $this->bankFactor;
     }
 
     /**
@@ -474,7 +474,7 @@ class Transaction
      */
     protected function getAuthorization()
     {
-        return $this->_authorization;
+        return $this->authorization;
     }
 
     /**
@@ -482,7 +482,7 @@ class Transaction
      */
     protected function getReceipt()
     {
-        return $this->_receipt;
+        return $this->receipt;
     }
 
     /**
@@ -490,7 +490,7 @@ class Transaction
      */
     protected function getRefunded()
     {
-        return $this->_refunded;
+        return $this->refunded;
     }
 
     /**
@@ -498,7 +498,7 @@ class Transaction
      */
     protected function getTransactionState()
     {
-        return $this->_transactionState;
+        return $this->transactionState;
     }
 
     /**
@@ -506,7 +506,7 @@ class Transaction
      */
     protected function getResponseCode()
     {
-        return $this->_responseCode;
+        return $this->responseCode;
     }
 
     /**
@@ -514,7 +514,7 @@ class Transaction
      */
     protected function getResponseReasonCode()
     {
-        return $this->_responseReasonCode;
+        return $this->responseReasonCode;
     }
 
     /**
@@ -522,7 +522,7 @@ class Transaction
      */
     protected function getResponseReasonText()
     {
-        return $this->_responseReasonText;
+        return $this->responseReasonText;
     }
 
     /**
@@ -530,7 +530,7 @@ class Transaction
      */
     protected function getServiceFeeTransactionState()
     {
-        return $this->_serviceFeeTransactionState;
+        return $this->serviceFeeTransactionState;
     }
 
     /**
@@ -538,7 +538,7 @@ class Transaction
      */
     protected function getServiceFeeResponseCode()
     {
-        return $this->_serviceFeeResponseCode;
+        return $this->serviceFeeResponseCode;
     }
 
     /**
@@ -546,7 +546,7 @@ class Transaction
      */
     protected function getServiceFeeResponseReasonCode()
     {
-        return $this->_serviceFeeResponseReasonCode;
+        return $this->serviceFeeResponseReasonCode;
     }
 
     /**
@@ -554,7 +554,7 @@ class Transaction
      */
     protected function getServiceFeeResponseReasonText()
     {
-        return $this->_serviceFeeResponseReasonText;
+        return $this->serviceFeeResponseReasonText;
     }
 
     /**
@@ -562,7 +562,7 @@ class Transaction
      */
     protected function getServiceFeeAuthorization()
     {
-        return $this->_serviceFeeAuthorization;
+        return $this->serviceFeeAuthorization;
     }
 
     /**
@@ -570,7 +570,7 @@ class Transaction
      */
     protected function getServiceFeeReceipt()
     {
-        return $this->_serviceFeeReceipt;
+        return $this->serviceFeeReceipt;
     }
 
     /**
@@ -578,6 +578,6 @@ class Transaction
      */
     protected function getAdditional()
     {
-        return $this->_additional;
+        return $this->additional;
     }
 }

@@ -11,7 +11,7 @@ class Request extends Arrayable
     /**
      * @var array
      */
-    private $_errors = [];
+    private $errors = [];
 
     /**
      * @return bool
@@ -26,7 +26,7 @@ class Request extends Arrayable
      */
     public function getErrors()
     {
-        return $this->_errors;
+        return $this->errors;
     }
 
     /**
@@ -35,10 +35,10 @@ class Request extends Arrayable
      */
     public function setError($property, $message)
     {
-        if (!isset($this->_errors[$property])) {
-            $this->_errors[$property] = [];
+        if (!isset($this->errors[$property])) {
+            $this->errors[$property] = [];
         }
 
-        $this->_errors[$property][] = $message;
+        $this->errors[$property][] = $message;
     }
 }
