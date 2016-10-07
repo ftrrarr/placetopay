@@ -31,7 +31,7 @@ class Attribute
     /**
      * @return string
      */
-    public function getName()
+    protected function getName()
     {
         return $this->_name;
     }
@@ -39,7 +39,7 @@ class Attribute
     /**
      * @return string
      */
-    public function getValue()
+    protected function getValue()
     {
         return $this->_value;
     }

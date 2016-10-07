@@ -30,4 +30,4 @@ $response = $aim->createTransaction(new AuthOnly(
     ]
 ));
 
-Utils::dumpx($response);
+Utils::dumpx($response->dataframe);

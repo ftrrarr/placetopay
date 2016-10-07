@@ -57,7 +57,7 @@ class Authentication
     /**
      * @return string
      */
-    public function getLogin()
+    protected function getLogin()
     {
         return $this->_login;
     }
@@ -65,7 +65,7 @@ class Authentication
     /**
      * @return string
      */
-    public function getTranKey()
+    protected function getTranKey()
     {
         return $this->_tranKey;
     }
@@ -73,7 +73,7 @@ class Authentication
     /**
      * @return string
      */
-    public function getSeed()
+    protected function getSeed()
     {
         return $this->_seed;
     }
@@ -81,7 +81,7 @@ class Authentication
     /**
      * @return ArrayOfAttribute
      */
-    public function getAdditional()
+    protected function getAdditional()
     {
         return $this->_additional;
     }

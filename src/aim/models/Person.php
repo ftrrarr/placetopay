@@ -97,7 +97,7 @@ class Person
     /**
      * @return string
      */
-    public function getDocumentType()
+    protected function getDocumentType()
     {
         return $this->_documentType;
     }
@@ -105,7 +105,7 @@ class Person
     /**
      * @return string
      */
-    public function getDocument()
+    protected function getDocument()
     {
         return $this->_document;
     }
@@ -113,7 +113,7 @@ class Person
     /**
      * @return string
      */
-    public function getFirstName()
+    protected function getFirstName()
     {
         return $this->_firstName;
     }
@@ -121,7 +121,7 @@ class Person
     /**
      * @return string
      */
-    public function getLastName()
+    protected function getLastName()
     {
         return $this->_lastName;
     }
@@ -129,7 +129,7 @@ class Person
     /**
      * @return string
      */
-    public function getCompany()
+    protected function getCompany()
     {
         return $this->_company;
     }
@@ -137,7 +137,7 @@ class Person
     /**
      * @return string
      */
-    public function getEmailAddress()
+    protected function getEmailAddress()
     {
         return $this->_emailAddress;
     }
@@ -145,7 +145,7 @@ class Person
     /**
      * @return string
      */
-    public function getAddress()
+    protected function getAddress()
     {
         return $this->_address;
     }
@@ -153,7 +153,7 @@ class Person
     /**
      * @return string
      */
-    public function getCity()
+    protected function getCity()
     {
         return $this->_city;
     }
@@ -161,7 +161,7 @@ class Person
     /**
      * @return string
      */
-    public function getProvince()
+    protected function getProvince()
     {
         return $this->_province;
     }
@@ -169,7 +169,7 @@ class Person
     /**
      * @return string
      */
-    public function getCountry()
+    protected function getCountry()
     {
         return $this->_country;
     }
@@ -177,7 +177,7 @@ class Person
     /**
      * @return string
      */
-    public function getPhone()
+    protected function getPhone()
     {
         return $this->_phone;
     }
@@ -185,7 +185,7 @@ class Person
     /**
      * @return string
      */
-    public function getMobile()
+    protected function getMobile()
     {
         return $this->_mobile;
     }

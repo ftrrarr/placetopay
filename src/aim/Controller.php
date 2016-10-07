@@ -44,7 +44,7 @@ abstract class Controller
     /**
      * @return Authentication
      */
-    public function getAuth()
+    protected function getAuth()
     {
         return $this->_auth;
     }
@@ -52,7 +52,7 @@ abstract class Controller
     /**
      * @return string
      */
-    public function getWsdl()
+    protected function getWsdl()
     {
         return $this->_wsdl;
     }
@@ -60,7 +60,7 @@ abstract class Controller
     /**
      * @return string
      */
-    public function getEndpoint()
+    protected function getEndpoint()
     {
         return $this->_endpoint;
     }

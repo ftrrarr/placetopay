@@ -84,7 +84,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getTransactionID()
+    protected function getTransactionID()
     {
         return $this->_transactionID;
     }
@@ -92,7 +92,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getSessionID()
+    protected function getSessionID()
     {
         return $this->_sessionID;
     }
@@ -100,7 +100,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getReference()
+    protected function getReference()
     {
         return $this->_reference;
     }
@@ -108,7 +108,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getRequestDate()
+    protected function getRequestDate()
     {
         return $this->_requestDate;
     }
@@ -116,7 +116,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getBankProcessDate()
+    protected function getBankProcessDate()
     {
         return $this->_bankProcessDate;
     }
@@ -124,7 +124,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getOnTest()
+    protected function getOnTest()
     {
         return $this->_onTest;
     }
@@ -132,7 +132,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getReturnCode()
+    protected function getReturnCode()
     {
         return $this->_returnCode;
     }
@@ -140,7 +140,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getTrazabilityCode()
+    protected function getTrazabilityCode()
     {
         return $this->_trazabilityCode;
     }
@@ -148,7 +148,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getTransactionCycle()
+    protected function getTransactionCycle()
     {
         return $this->_transactionCycle;
     }
@@ -156,7 +156,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getTransactionState()
+    protected function getTransactionState()
     {
         return $this->_transactionState;
     }
@@ -164,7 +164,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getResponseCode()
+    protected function getResponseCode()
     {
         return $this->_responseCode;
     }
@@ -172,7 +172,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getResponseReasonCode()
+    protected function getResponseReasonCode()
     {
         return $this->_responseReasonCode;
     }
@@ -180,7 +180,7 @@ class TransactionInformation
     /**
      * @return mixed
      */
-    public function getResponseReasonText()
+    protected function getResponseReasonText()
     {
         return $this->_responseReasonText;
     }

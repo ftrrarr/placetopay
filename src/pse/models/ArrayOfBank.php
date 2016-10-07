@@ -29,7 +29,7 @@ class ArrayOfBank implements \ArrayAccess, \Iterator, \Countable
     /**
      * @return Bank[]
      */
-    public function getItem()
+    protected function getItem()
     {
         return $this->_item;
     }

@@ -32,7 +32,7 @@ class Bank
     /**
      * @return string
      */
-    public function getCode()
+    protected function getCode()
     {
         return $this->_code;
     }
@@ -40,7 +40,7 @@ class Bank
     /**
      * @return string
      */
-    public function getName()
+    protected function getName()
     {
         return $this->_name;
     }

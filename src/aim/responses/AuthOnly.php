@@ -36,7 +36,7 @@ class AuthOnly
     /**
      * @return DataFrame
      */
-    public function getDataframe()
+    protected function getDataframe()
     {
         return $this->_dataframe;
     }

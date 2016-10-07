@@ -264,7 +264,7 @@ class Transaction
     /**
      * @return int
      */
-    public function getTransactionID()
+    protected function getTransactionID()
     {
         return $this->_transactionID;
     }
@@ -272,7 +272,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getSessionID()
+    protected function getSessionID()
     {
         return $this->_sessionID;
     }
@@ -280,7 +280,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getReference()
+    protected function getReference()
     {
         return $this->_reference;
     }
@@ -288,7 +288,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getRequestDate()
+    protected function getRequestDate()
     {
         return $this->_requestDate;
     }
@@ -296,7 +296,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getBankProcessDate()
+    protected function getBankProcessDate()
     {
         return $this->_bankProcessDate;
     }
@@ -304,7 +304,7 @@ class Transaction
     /**
      * @return bool
      */
-    public function getOnTest()
+    protected function getOnTest()
     {
         return $this->_onTest;
     }
@@ -312,7 +312,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getDescription()
+    protected function getDescription()
     {
         return $this->_description;
     }
@@ -320,7 +320,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getCurrency()
+    protected function getCurrency()
     {
         return $this->_currency;
     }
@@ -328,7 +328,7 @@ class Transaction
     /**
      * @return float
      */
-    public function getTotalAmount()
+    protected function getTotalAmount()
     {
         return $this->_totalAmount;
     }
@@ -336,7 +336,7 @@ class Transaction
     /**
      * @return float
      */
-    public function getTaxAmount()
+    protected function getTaxAmount()
     {
         return $this->_taxAmount;
     }
@@ -344,7 +344,7 @@ class Transaction
     /**
      * @return float
      */
-    public function getDevolutionBase()
+    protected function getDevolutionBase()
     {
         return $this->_devolutionBase;
     }
@@ -352,7 +352,7 @@ class Transaction
     /**
      * @return float
      */
-    public function getTipAmount()
+    protected function getTipAmount()
     {
         return $this->_tipAmount;
     }
@@ -360,7 +360,7 @@ class Transaction
     /**
      * @return int
      */
-    public function getAirline()
+    protected function getAirline()
     {
         return $this->_airline;
     }
@@ -368,7 +368,7 @@ class Transaction
     /**
      * @return float
      */
-    public function getServiceFee()
+    protected function getServiceFee()
     {
         return $this->_serviceFee;
     }
@@ -376,7 +376,7 @@ class Transaction
     /**
      * @return float
      */
-    public function getServiceFeeTax()
+    protected function getServiceFeeTax()
     {
         return $this->_serviceFeeTax;
     }
@@ -384,7 +384,7 @@ class Transaction
     /**
      * @return float
      */
-    public function getServiceFeeBase()
+    protected function getServiceFeeBase()
     {
         return $this->_serviceFeeBase;
     }
@@ -392,7 +392,7 @@ class Transaction
     /**
      * @return Person
      */
-    public function getPayer()
+    protected function getPayer()
     {
         return $this->_payer;
     }
@@ -400,7 +400,7 @@ class Transaction
     /**
      * @return Person
      */
-    public function getBuyer()
+    protected function getBuyer()
     {
         return $this->_buyer;
     }
@@ -408,7 +408,7 @@ class Transaction
     /**
      * @return Person
      */
-    public function getShipping()
+    protected function getShipping()
     {
         return $this->_shipping;
     }
@@ -416,7 +416,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getIpAddress()
+    protected function getIpAddress()
     {
         return $this->_ipAddress;
     }
@@ -424,7 +424,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getUserAgent()
+    protected function getUserAgent()
     {
         return $this->_userAgent;
     }
@@ -432,7 +432,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getFranchise()
+    protected function getFranchise()
     {
         return $this->_franchise;
     }
@@ -440,7 +440,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getFranchiseName()
+    protected function getFranchiseName()
     {
         return $this->_franchiseName;
     }
@@ -448,7 +448,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getBankName()
+    protected function getBankName()
     {
         return $this->_bankName;
     }
@@ -456,7 +456,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getBankCurrency()
+    protected function getBankCurrency()
     {
         return $this->_bankCurrency;
     }
@@ -464,7 +464,7 @@ class Transaction
     /**
      * @return float
      */
-    public function getBankFactor()
+    protected function getBankFactor()
     {
         return $this->_bankFactor;
     }
@@ -472,7 +472,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getAuthorization()
+    protected function getAuthorization()
     {
         return $this->_authorization;
     }
@@ -480,7 +480,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getReceipt()
+    protected function getReceipt()
     {
         return $this->_receipt;
     }
@@ -488,7 +488,7 @@ class Transaction
     /**
      * @return bool
      */
-    public function getRefunded()
+    protected function getRefunded()
     {
         return $this->_refunded;
     }
@@ -496,7 +496,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getTransactionState()
+    protected function getTransactionState()
     {
         return $this->_transactionState;
     }
@@ -504,7 +504,7 @@ class Transaction
     /**
      * @return int
      */
-    public function getResponseCode()
+    protected function getResponseCode()
     {
         return $this->_responseCode;
     }
@@ -512,7 +512,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getResponseReasonCode()
+    protected function getResponseReasonCode()
     {
         return $this->_responseReasonCode;
     }
@@ -520,7 +520,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getResponseReasonText()
+    protected function getResponseReasonText()
     {
         return $this->_responseReasonText;
     }
@@ -528,7 +528,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getServiceFeeTransactionState()
+    protected function getServiceFeeTransactionState()
     {
         return $this->_serviceFeeTransactionState;
     }
@@ -536,7 +536,7 @@ class Transaction
     /**
      * @return int
      */
-    public function getServiceFeeResponseCode()
+    protected function getServiceFeeResponseCode()
     {
         return $this->_serviceFeeResponseCode;
     }
@@ -544,7 +544,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getServiceFeeResponseReasonCode()
+    protected function getServiceFeeResponseReasonCode()
     {
         return $this->_serviceFeeResponseReasonCode;
     }
@@ -552,7 +552,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getServiceFeeResponseReasonText()
+    protected function getServiceFeeResponseReasonText()
     {
         return $this->_serviceFeeResponseReasonText;
     }
@@ -560,7 +560,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getServiceFeeAuthorization()
+    protected function getServiceFeeAuthorization()
     {
         return $this->_serviceFeeAuthorization;
     }
@@ -568,7 +568,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getServiceFeeReceipt()
+    protected function getServiceFeeReceipt()
     {
         return $this->_serviceFeeReceipt;
     }
@@ -576,7 +576,7 @@ class Transaction
     /**
      * @return ArrayOfAttribute
      */
-    public function getAdditional()
+    protected function getAdditional()
     {
         return $this->_additional;
     }
