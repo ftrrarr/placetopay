@@ -2,11 +2,11 @@
 
 namespace rad8329\placetopay;
 
+use GuzzleHttp\Client;
+use rad8329\placetopay\aim\Controller;
 use rad8329\placetopay\aim\models\DataFrame;
 use rad8329\placetopay\aim\requests\AuthOnly as AuthOnlyRequest;
 use rad8329\placetopay\aim\responses\AuthOnly as AuthOnlyResponse;
-use rad8329\placetopay\aim\Controller;
-use GuzzleHttp\Client;
 
 class AIM extends Controller
 {

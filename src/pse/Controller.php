@@ -22,7 +22,7 @@ abstract class Controller
      * Controller constructor.
      *
      * @param Authentication $auth
-     * @param string         $wsdl
+     * @param string $wsdl
      *
      * @throws \InvalidArgumentException
      */

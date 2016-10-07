@@ -6,7 +6,17 @@ class Utils
 {
     /**
      * @param mixed $args
-     * @param bool  $pretty
+     * @param bool $pretty
+     */
+    public static function dumpx($args, $pretty = true)
+    {
+        self::dump($args, $pretty);
+        exit;
+    }
+
+    /**
+     * @param mixed $args
+     * @param bool $pretty
      */
     public static function dump($args, $pretty = true)
     {
@@ -20,19 +30,9 @@ class Utils
     }
 
     /**
-     * @param mixed $args
-     * @param bool  $pretty
-     */
-    public static function dumpx($args, $pretty = true)
-    {
-        self::dump($args, $pretty);
-        exit;
-    }
-
-    /**
-     * @param object|array|string $object     the object to be converted into an array
-     * @param array               $properties
-     * @param bool                $recursive
+     * @param object|array|string $object the object to be converted into an array
+     * @param array $properties
+     * @param bool $recursive
      *
      * @return array
      */

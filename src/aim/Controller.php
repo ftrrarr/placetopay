@@ -24,8 +24,8 @@ abstract class Controller
      * Operations constructor.
      *
      * @param Authentication $auth
-     * @param string         $wsdl
-     * @param string         $endpoint
+     * @param string $wsdl
+     * @param string $endpoint
      *
      * @throws \InvalidArgumentException
      */

@@ -39,8 +39,8 @@ class Authentication
     /**
      * Authentication constructor.
      *
-     * @param string           $login
-     * @param string           $tranKey
+     * @param string $login
+     * @param string $tranKey
      * @param ArrayOfAttribute $additional
      */
     public function __construct($login, $tranKey, ArrayOfAttribute $additional = null)
@@ -52,6 +52,16 @@ class Authentication
         if ($additional) {
             $this->additional = $additional;
         }
+    }
+
+    /**
+     * @param string $tranKey
+     *
+     * @return string
+     */
+    private function generateHashKey($tranKey)
+    {
+        return sha1($this->seed . $tranKey, false);
     }
 
     /**
@@ -84,15 +94,5 @@ class Authentication
     protected function getAdditional()
     {
         return $this->additional;
-    }
-
-    /**
-     * @param string $tranKey
-     *
-     * @return string
-     */
-    private function generateHashKey($tranKey)
-    {
-        return sha1($this->seed.$tranKey, false);
     }
 }

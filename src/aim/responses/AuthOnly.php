@@ -28,7 +28,7 @@ class AuthOnly
     public function __construct(array $config)
     {
         $this->configure($config);
-        
+
         if ($this->dataframe && !$this->dataframe instanceof DataFrame) {
             throw new InvalidConfigException(
                 'The \'dataframe\' is not an instace of rad8329\placetopay\aim\models\DataFrame'

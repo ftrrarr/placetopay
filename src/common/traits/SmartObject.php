@@ -9,24 +9,6 @@ use rad8329\placetopay\common\exceptions\UnknownPropertyException;
 trait SmartObject
 {
     /**
-     * @param array $properties the property initial values given in terms of name-value pairs
-     *
-     * @throws UnknownPropertyException
-     */
-    protected function configure(array $properties = [])
-    {
-        foreach ($properties as $name => $value) {
-            if ($this->canSetProperty($name)) {
-                $this->$name = $value;
-            } elseif ($this->hasProperty($name) && !$this->canSetProperty($name)) {
-                $this->$name = $value;
-            } else {
-                throw new UnknownPropertyException('Setting unknown property: ' . get_class($this) . '::' . $name);
-            }
-        }
-    }
-
-    /**
      * @return string the fully qualified name of this class
      */
     public static function className()
@@ -137,6 +119,45 @@ trait SmartObject
 
     /**
      * @param string $name
+     *
+     * @return bool
+     */
+    public function hasMethod($name)
+    {
+        return method_exists($this, $name);
+    }
+
+    /**
+     * @param array $properties the property initial values given in terms of name-value pairs
+     *
+     * @throws UnknownPropertyException
+     */
+    protected function configure(array $properties = [])
+    {
+        foreach ($properties as $name => $value) {
+            if ($this->canSetProperty($name)) {
+                $this->$name = $value;
+            } elseif ($this->hasProperty($name) && !$this->canSetProperty($name)) {
+                $this->$name = $value;
+            } else {
+                throw new UnknownPropertyException('Setting unknown property: ' . get_class($this) . '::' . $name);
+            }
+        }
+    }
+
+    /**
+     * @param string $name
+     * @param bool $checkVars whether to treat member variables as properties
+     *
+     * @return bool
+     */
+    public function canSetProperty($name, $checkVars = true)
+    {
+        return method_exists($this, 'set' . $name) || $checkVars && property_exists($this, $name);
+    }
+
+    /**
+     * @param string $name
      * @param bool $checkVars whether to treat member variables as properties
      *
      * @return bool
@@ -155,26 +176,5 @@ trait SmartObject
     public function canGetProperty($name, $checkVars = true)
     {
         return method_exists($this, 'get' . $name) || $checkVars && property_exists($this, $name);
-    }
-
-    /**
-     * @param string $name
-     * @param bool $checkVars whether to treat member variables as properties
-     *
-     * @return bool
-     */
-    public function canSetProperty($name, $checkVars = true)
-    {
-        return method_exists($this, 'set' . $name) || $checkVars && property_exists($this, $name);
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return bool
-     */
-    public function hasMethod($name)
-    {
-        return method_exists($this, $name);
     }
 }

@@ -12,6 +12,11 @@ class ArrayOfAttribute implements \ArrayAccess, \Iterator, \Countable
     use SmartObject;
 
     /**
+     * @var Attribute[]
+     */
+    private $item = [];
+
+    /**
      * ArrayOfAttribute constructor.
      *
      * @param array $item
@@ -19,19 +24,6 @@ class ArrayOfAttribute implements \ArrayAccess, \Iterator, \Countable
     public function __construct(array $item)
     {
         $this->item = $item;
-    }
-
-    /**
-     * @var Attribute[]
-     */
-    private $item = [];
-
-    /**
-     * @return Attribute[]
-     */
-    protected function getItem()
-    {
-        return $this->item;
     }
 
     /**
@@ -44,6 +36,26 @@ class ArrayOfAttribute implements \ArrayAccess, \Iterator, \Countable
     public function offsetExists($offset)
     {
         return isset($this->item[$this->offSetName($offset)]);
+    }
+
+    /**
+     * @param string $offset
+     *
+     * @return string
+     */
+    private function offSetName($offset)
+    {
+        return $offset ? $offset : $this->count();
+    }
+
+    /**
+     * Countable implementation.
+     *
+     * @return Attribute Return count of elements
+     */
+    public function count()
+    {
+        return count($this->item);
     }
 
     /**
@@ -61,8 +73,8 @@ class ArrayOfAttribute implements \ArrayAccess, \Iterator, \Countable
     /**
      * ArrayAccess implementation.
      *
-     * @param mixed     $offset The offset to assign the value to
-     * @param Attribute $value  The value to set
+     * @param mixed $offset The offset to assign the value to
+     * @param Attribute $value The value to set
      */
     public function offsetSet($offset, $value)
     {
@@ -101,21 +113,21 @@ class ArrayOfAttribute implements \ArrayAccess, \Iterator, \Countable
     /**
      * Iterator implementation.
      *
-     * @return string|null Return the key of the current element or null
-     */
-    public function key()
-    {
-        return key($this->item);
-    }
-
-    /**
-     * Iterator implementation.
-     *
      * @return bool Return the validity of the current position
      */
     public function valid()
     {
         return $this->key() !== null;
+    }
+
+    /**
+     * Iterator implementation.
+     *
+     * @return string|null Return the key of the current element or null
+     */
+    public function key()
+    {
+        return key($this->item);
     }
 
     /**
@@ -128,22 +140,10 @@ class ArrayOfAttribute implements \ArrayAccess, \Iterator, \Countable
     }
 
     /**
-     * Countable implementation.
-     *
-     * @return Attribute Return count of elements
+     * @return Attribute[]
      */
-    public function count()
+    protected function getItem()
     {
-        return count($this->item);
-    }
-
-    /**
-     * @param string $offset
-     *
-     * @return string
-     */
-    private function offSetName($offset)
-    {
-        return $offset ? $offset : $this->count();
+        return $this->item;
     }
 }

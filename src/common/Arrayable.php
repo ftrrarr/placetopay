@@ -7,22 +7,6 @@ class Arrayable implements ArrayableInterface
     /**
      * {@inheritdoc}
      */
-    public function properties()
-    {
-        $class = new \ReflectionClass($this);
-        $names = [];
-        foreach ($class->getProperties(\ReflectionProperty::IS_PUBLIC) as $property) {
-            if (!$property->isStatic()) {
-                $names[] = $property->getName();
-            }
-        }
-
-        return $names;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function toArray(array $properties = [], $recursive = true)
     {
         $data = [];
@@ -56,5 +40,21 @@ class Arrayable implements ArrayableInterface
         }
 
         return $result;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function properties()
+    {
+        $class = new \ReflectionClass($this);
+        $names = [];
+        foreach ($class->getProperties(\ReflectionProperty::IS_PUBLIC) as $property) {
+            if (!$property->isStatic()) {
+                $names[] = $property->getName();
+            }
+        }
+
+        return $names;
     }
 }
