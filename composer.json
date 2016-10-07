@@ -1,0 +1,31 @@
+{
+  "name": "rad8329/placetopay",
+  "description": "API de integración con la plataforma de pagos PlaceToPay",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robert Diaz",
+      "email": "rad8329@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0",
+    "ext-soap": "*",
+    "guzzlehttp/guzzle": "~5.0"
+  },
+  "require-dev": {
+    "ext-curl": "*",
+    "phpunit/phpunit": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "rad8329\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "rad8329\\tests\\": "tests/"
+    }
+  }
+}
