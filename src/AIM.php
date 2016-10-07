@@ -2,20 +2,20 @@
 
 namespace rad8329\placetopay;
 
-use rad8329\placetopay\aim\models\ResponseDataFrame;
-use rad8329\placetopay\aim\requests\AuthOnly;
+use rad8329\placetopay\aim\models\DataFrame;
+use rad8329\placetopay\aim\requests\AuthOnly as AuthOnlyRequest;
+use rad8329\placetopay\aim\responses\AuthOnly as AuthOnlyResponse;
 use rad8329\placetopay\aim\Controller;
-use rad8329\placetopay\common\Response;
 use GuzzleHttp\Client;
 
 class AIM extends Controller
 {
     /**
-     * @param AuthOnly $request
+     * @param AuthOnlyRequest $request
      *
-     * @return Response
+     * @return AuthOnlyResponse
      */
-    public function createTransaction(AuthOnly $request)
+    public function createTransaction(AuthOnlyRequest $request)
     {
         $request->x_login = $this->auth->login;
         $request->x_tran_key = $this->auth->tranKey;
@@ -32,14 +32,14 @@ class AIM extends Controller
 
             $response_config['headers'] = $response->getHeaders();
 
-            $dataframe = new ResponseDataFrame($response->getBody()->getContents());
+            $dataframe = new DataFrame($response->getBody()->getContents());
         }
 
-        return (new Response(
+        return new AuthOnlyResponse(
             array_merge(
                 $response_config,
-                ['errors' => $request->getErrors()]
+                ['errors' => $request->getErrors(), 'dataframe' => $dataframe]
             )
-        ))->set('dataframe', $dataframe);
+        );
     }
 }

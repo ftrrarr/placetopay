@@ -2,16 +2,18 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$aim = new \rad8329\placetopay\AIM(
-    new \rad8329\placetopay\common\models\Authentication(
-        '999ff8a0729cdb114dkkk4bbad9ce1d0',
-        'v2J1HoPP'
-    ),
+use \rad8329\placetopay\AIM;
+use \rad8329\placetopay\common\models\Authentication;
+use \rad8329\placetopay\aim\requests\AuthOnly;
+use \rad8329\placetopay\common\Utils;
+
+$aim = new AIM(
+    new Authentication('999ff8a0729cdb114dkkk4bbad9ce1d0', 'v2J1HoPP'),
     'https://api.placetopay.com/soap/placetopay/?wsdl',
     'https://api.placetopay.com/gateway/paymentdirect.php'
 );
 
-$response = $aim->createTransaction(new \rad8329\placetopay\aim\requests\AuthOnly(
+$response = $aim->createTransaction(new AuthOnly(
     [
         'x_language' => 'ES',
         'x_customer_ip' => '181.49.80.236',
@@ -28,4 +30,4 @@ $response = $aim->createTransaction(new \rad8329\placetopay\aim\requests\AuthOnl
     ]
 ));
 
-print_r($response);
+Utils::dumpx($response);

@@ -2,7 +2,7 @@
 
 namespace rad8329\placetopay\aim\models;
 
-class ResponseDataFrame
+class DataFrame
 {
     /**
      * @var int
@@ -210,7 +210,7 @@ class ResponseDataFrame
     public $x_placetopay_internal_reference;
 
     /**
-     * ResponseDataFrame constructor.
+     * DataFrame constructor.
      *
      * @param string $string Data frame
      */

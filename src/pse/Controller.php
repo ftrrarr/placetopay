@@ -6,7 +6,7 @@ use rad8329\placetopay\common\models\Authentication;
 use rad8329\placetopay\common\traits\SmartObject;
 
 /**
- * Class Operation.
+ * Class Controller.
  *
  * @property Authentication $auth
  * @property string $wsdl
@@ -19,7 +19,7 @@ abstract class Controller
     private $_wsdl;
 
     /**
-     * Operations constructor.
+     * Controller constructor.
      *
      * @param Authentication $auth
      * @param string         $wsdl

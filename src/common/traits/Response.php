@@ -1,9 +1,8 @@
 <?php
 
-namespace rad8329\placetopay\common;
+namespace rad8329\placetopay\common\traits;
 
 use rad8329\placetopay\common\exceptions\InvalidConfigException;
-use rad8329\placetopay\common\traits\SmartObject;
 
 /**
  * Class Response.
@@ -11,7 +10,7 @@ use rad8329\placetopay\common\traits\SmartObject;
  * @property array $headers
  * @property array $errors
  */
-class Response
+trait Response
 {
     use SmartObject;
 
@@ -19,11 +18,6 @@ class Response
      * @var array
      */
     private $_headers;
-
-    /**
-     * @var array
-     */
-    private $_data = [];
 
     /**
      * @var array
@@ -39,11 +33,7 @@ class Response
      */
     public function __construct(array $config)
     {
-        unset($config['data']);
-
-        foreach ($config as $property => $value) {
-            $this->setProperty($property, $value);
-        }
+        $this->configure($config);
 
         if ($this->_headers && !is_array($this->_headers)) {
             throw new InvalidConfigException("The 'headers' is not an array.");
@@ -52,30 +42,6 @@ class Response
         if ($this->_errors && !is_array($this->_errors)) {
             throw new InvalidConfigException("The 'errors' is not an array.");
         }
-    }
-
-    /**
-     * @param string $data
-     * @param mixed  $value
-     *
-     * @return Response
-     */
-    public function set($data, $value)
-    {
-        $this->_data[$data] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $data
-     * @param mixed  $default
-     *
-     * @return array
-     */
-    public function get($data, $default = null)
-    {
-        return isset($this->_data[$data]) ? $this->_data[$data] : $default;
     }
 
     /**

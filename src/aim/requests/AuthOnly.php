@@ -2,6 +2,7 @@
 
 namespace rad8329\placetopay\aim\requests;
 
+use rad8329\placetopay\aim\models\Person;
 use rad8329\placetopay\common\Request;
 
 class AuthOnly extends Request
@@ -108,6 +109,21 @@ class AuthOnly extends Request
      */
     public $x_card_code;
 
+    /**
+     * @var Person
+     */
+    public $person;
+
+    /**
+     * AuthOnly constructor.
+     *
+     * @param array $config
+     */
+    public function __construct(array $config = [])
+    {
+        $this->configure($config);
+    }
+
     public function rules()
     {
         return [
@@ -173,10 +189,10 @@ class AuthOnly extends Request
     /**
      * {@inheritdoc}
      */
-    public function toArray(array $fields = [])
+    public function toArray(array $properties = [], $recursive = true)
     {
         return $array = array_merge(
-            parent::toArray($fields),
+            parent::toArray($properties, $recursive),
             ['x_type' => self::REQUEST_TYPE, 'x_method' => self::METHOD, 'x_card_type' => self::CARD_TYPE]
         );
     }

@@ -91,9 +91,7 @@ class Person
      */
     public function __construct(array $config)
     {
-        foreach ($config as $property => $value) {
-            $this->setProperty($property, $value);
-        }
+        $this->configure($config);
     }
 
     /**

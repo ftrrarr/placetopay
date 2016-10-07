@@ -9,12 +9,21 @@ use rad8329\placetopay\common\exceptions\UnknownPropertyException;
 trait SmartObject
 {
     /**
-     * @param string $property
-     * @param mixed  $value
+     * @param array $properties the property initial values given in terms of name-value pairs
+     *
+     * @throws UnknownPropertyException
      */
-    private function setProperty($property, $value)
+    protected function configure(array $properties = [])
     {
-        $this->{"_{$property}"} = $value;
+        foreach ($properties as $name => $value) {
+            if ($this->canSetProperty($name)) {
+                $this->$name = $value;
+            } elseif ($this->hasProperty("_{$name}")) {
+                $this->{"_{$name}"} = $value;
+            } else {
+                throw new UnknownPropertyException('Setting unknown property: '.get_class($this).'::'.$name);
+            }
+        }
     }
 
     /**
