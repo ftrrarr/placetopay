@@ -5,6 +5,11 @@ namespace rad8329\placetopay\common;
 class Request
 {
     /**
+     * @var array
+     */
+    private $_errors = [];
+
+    /**
      * @return bool
      */
     public function validate()
@@ -13,7 +18,28 @@ class Request
     }
 
     /**
-     * @return array list of params names.
+     * @return mixed
+     */
+    public function getErrors()
+    {
+        return $this->_errors;
+    }
+
+    /**
+     * @param string $param
+     * @param string $message
+     */
+    public function setError($param, $message)
+    {
+        if (!isset($this->_errors[$param])) {
+            $this->_errors[$param] = [];
+        }
+
+        $this->_errors[$param][] = $message;
+    }
+
+    /**
+     * @return array list of params names
      */
     public function params()
     {
@@ -29,7 +55,8 @@ class Request
     }
 
     /**
-     * @param array $params the params being requested.
+     * @param array $params the params being requested
+     *
      * @return array the array representation of the object
      */
     public function toArray(array $params = [])
@@ -44,7 +71,8 @@ class Request
 
     /**
      * @param array $params the params being requested for exporting
-     * @return array the list of params to be exported.
+     *
+     * @return array the list of params to be exported
      */
     protected function resolveParams(array $params)
     {

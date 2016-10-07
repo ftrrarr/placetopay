@@ -20,12 +20,12 @@
   },
   "autoload": {
     "psr-4": {
-      "rad8329\\": "src/"
+      "rad8329\\placetopay\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "rad8329\\tests\\": "tests/"
+      "rad8329\\placetopay\\tests\\": "tests/"
     }
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace rad8329\placetopay\models;
+namespace rad8329\placetopay\pse\models;
 
 class PSETransactionResponse
 {

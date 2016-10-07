@@ -2,7 +2,6 @@
 
 namespace rad8329\placetopay\common\traits;
 
-
 use rad8329\placetopay\common\exceptions\InvalidCallException;
 use rad8329\placetopay\common\exceptions\UnknownMethodException;
 use rad8329\placetopay\common\exceptions\UnknownPropertyException;
@@ -11,7 +10,7 @@ trait SmartObject
 {
     /**
      * @param string $property
-     * @param mixed $value
+     * @param mixed  $value
      */
     private function setProperty($property, $value)
     {
@@ -36,32 +35,32 @@ trait SmartObject
      */
     public function __get($name)
     {
-        $getter = 'get' . $name;
+        $getter = 'get'.$name;
         if (method_exists($this, $getter)) {
             return $this->$getter();
-        } elseif (method_exists($this, 'set' . $name)) {
-            throw new InvalidCallException('Getting write-only property: ' . get_class($this) . '::' . $name);
+        } elseif (method_exists($this, 'set'.$name)) {
+            throw new InvalidCallException('Getting write-only property: '.get_class($this).'::'.$name);
         } else {
-            throw new UnknownPropertyException('Getting unknown property: ' . get_class($this) . '::' . $name);
+            throw new UnknownPropertyException('Getting unknown property: '.get_class($this).'::'.$name);
         }
     }
 
     /**
      * @param string $name
-     * @param mixed $value
+     * @param mixed  $value
      *
      * @throws UnknownPropertyException if the property is not defined
      * @throws InvalidCallException     if the property is read-only
      */
     public function __set($name, $value)
     {
-        $setter = 'set' . $name;
+        $setter = 'set'.$name;
         if (method_exists($this, $setter)) {
             $this->$setter($value);
-        } elseif (method_exists($this, 'get' . $name)) {
-            throw new InvalidCallException('Setting read-only property: ' . get_class($this) . '::' . $name);
+        } elseif (method_exists($this, 'get'.$name)) {
+            throw new InvalidCallException('Setting read-only property: '.get_class($this).'::'.$name);
         } else {
-            throw new UnknownPropertyException('Setting unknown property: ' . get_class($this) . '::' . $name);
+            throw new UnknownPropertyException('Setting unknown property: '.get_class($this).'::'.$name);
         }
     }
 
@@ -81,7 +80,7 @@ trait SmartObject
      */
     public function __isset($name)
     {
-        $getter = 'get' . $name;
+        $getter = 'get'.$name;
         if (method_exists($this, $getter)) {
             return $this->$getter() !== null;
         } else {
@@ -106,17 +105,17 @@ trait SmartObject
      */
     public function __unset($name)
     {
-        $setter = 'set' . $name;
+        $setter = 'set'.$name;
         if (method_exists($this, $setter)) {
             $this->$setter(null);
-        } elseif (method_exists($this, 'get' . $name)) {
-            throw new InvalidCallException('Unsetting read-only property: ' . get_class($this) . '::' . $name);
+        } elseif (method_exists($this, 'get'.$name)) {
+            throw new InvalidCallException('Unsetting read-only property: '.get_class($this).'::'.$name);
         }
     }
 
     /**
-     * @param string $name the method name
-     * @param array $params method parameters
+     * @param string $name   the method name
+     * @param array  $params method parameters
      *
      * @throws UnknownMethodException when calling unknown method
      *
@@ -124,12 +123,12 @@ trait SmartObject
      */
     public function __call($name, $params)
     {
-        throw new UnknownMethodException('Calling unknown method: ' . get_class($this) . "::$name()");
+        throw new UnknownMethodException('Calling unknown method: '.get_class($this)."::$name()");
     }
 
     /**
      * @param string $name
-     * @param bool $checkVars whether to treat member variables as properties
+     * @param bool   $checkVars whether to treat member variables as properties
      *
      * @return bool
      */
@@ -140,24 +139,24 @@ trait SmartObject
 
     /**
      * @param string $name
-     * @param bool $checkVars whether to treat member variables as properties
+     * @param bool   $checkVars whether to treat member variables as properties
      *
      * @return bool
      */
     public function canGetProperty($name, $checkVars = true)
     {
-        return method_exists($this, 'get' . $name) || $checkVars && property_exists($this, $name);
+        return method_exists($this, 'get'.$name) || $checkVars && property_exists($this, $name);
     }
 
     /**
      * @param string $name
-     * @param bool $checkVars whether to treat member variables as properties
+     * @param bool   $checkVars whether to treat member variables as properties
      *
      * @return bool
      */
     public function canSetProperty($name, $checkVars = true)
     {
-        return method_exists($this, 'set' . $name) || $checkVars && property_exists($this, $name);
+        return method_exists($this, 'set'.$name) || $checkVars && property_exists($this, $name);
     }
 
     /**

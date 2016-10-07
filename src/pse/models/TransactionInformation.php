@@ -1,6 +1,6 @@
 <?php
 
-namespace rad8329\placetopay\models;
+namespace rad8329\placetopay\pse\models;
 
 use rad8329\placetopay\common\traits\SmartObject;
 
