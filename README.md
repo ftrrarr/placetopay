@@ -1,5 +1,5 @@
-#PlaceToPay SDK
-Place to Pay SDK para los mecanismos AIM y PSE
+#PlaceToPay
+SDK para los mecanismos AIM y PSE
 
 ##Requerimientos
 * PHP >=5.4
