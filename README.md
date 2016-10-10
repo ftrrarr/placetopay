@@ -36,3 +36,6 @@ $response = $aim->createTransaction(new \rad8329\placetopay\aim\requests\AuthOnl
     ]
 ));
 ```
+
+###NOTA
+Esta SDK aún está en proceso de desarrollo, no se debe usar en producción
