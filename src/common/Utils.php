@@ -3,41 +3,17 @@
 namespace rad8329\placetopay\common;
 
 /**
- * Class Utils
+ * Class Utils.
+ *
  * @SuppressWarnings(PHPMD.CyclomaticComplexity)
  * @SuppressWarnings(PHPMD.NPathComplexity)
  */
 class Utils
 {
     /**
-     * @param mixed $args
-     * @param bool $pretty
-     */
-    public static function dumpx($args, $pretty = true)
-    {
-        self::dump($args, $pretty);
-        exit;
-    }
-
-    /**
-     * @param mixed $args
-     * @param bool $pretty
-     */
-    public static function dump($args, $pretty = true)
-    {
-        if ($pretty) {
-            $print = print_r($args, 1);
-            $print = str_replace(['<', '>', '{{%', '}}'], ['&lt;', '&gt;', '', ''], $print);
-            echo "<pre>$print</pre>";
-        } else {
-            print_r($args);
-        }
-    }
-
-    /**
-     * @param object|array|string $object the object to be converted into an array
-     * @param array $properties
-     * @param bool $recursive
+     * @param object|array|string $object     the object to be converted into an array
+     * @param array               $properties
+     * @param bool                $recursive
      *
      * @return array
      */

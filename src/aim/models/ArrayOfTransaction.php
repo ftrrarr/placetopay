@@ -73,8 +73,8 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
     /**
      * ArrayAccess implementation.
      *
-     * @param mixed $offset The offset to assign the value to
-     * @param Transaction $value The value to set
+     * @param mixed       $offset The offset to assign the value to
+     * @param Transaction $value  The value to set
      */
     public function offsetSet($offset, $value)
     {

@@ -13,7 +13,7 @@ interface ArrayableInterface
      * Converts the object into an array.
      *
      * @param array $properties
-     * @param bool $recursive whether to recursively return array representation of embedded objects
+     * @param bool  $recursive  whether to recursively return array representation of embedded objects
      *
      * @return array the array representation of the object
      */

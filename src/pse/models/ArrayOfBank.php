@@ -74,7 +74,7 @@ class ArrayOfBank implements \ArrayAccess, \Iterator, \Countable
      * ArrayAccess implementation.
      *
      * @param mixed $offset The offset to assign the value to
-     * @param Bank $value The value to set
+     * @param Bank  $value  The value to set
      */
     public function offsetSet($offset, $value)
     {
