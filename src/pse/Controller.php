@@ -2,7 +2,7 @@
 
 namespace rad8329\placetopay\pse;
 
-use rad8329\placetopay\common\models\Authentication;
+use rad8329\placetopay\pse\models\Authentication;
 use rad8329\placetopay\common\traits\SmartObject;
 
 /**

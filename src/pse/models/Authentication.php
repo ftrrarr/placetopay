@@ -1,7 +1,8 @@
 <?php
 
-namespace rad8329\placetopay\common\models;
+namespace rad8329\placetopay\pse\models;
 
+use rad8329\placetopay\common\models\ArrayOfAttribute;
 use rad8329\placetopay\common\traits\SmartObject;
 
 /**
