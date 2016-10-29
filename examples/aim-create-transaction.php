@@ -1,9 +1,9 @@
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
-require __DIR__.'/utils.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/utils.php';
 
-$config = require __DIR__.'/config/main.php';
+$config = require __DIR__ . '/config/main.php';
 
 use rad8329\placetopay\AIM;
 use rad8329\placetopay\aim\models\Authentication;
@@ -34,7 +34,8 @@ $response = $aim->createTransaction(new AuthOnly(
         'x_amount' => '50000.00',
         'x_tax' => '0.00',
         'x_amount_base' => '0.00',
+        'x_test_request' => $config['test'] ? 'TRUE' : 'FALSE',
     ]
 ));
 
-dumpx($response->dataframe);
+dumpx($response->errors);

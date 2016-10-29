@@ -47,7 +47,7 @@ trait Response
     /**
      * @return array
      */
-    public function getHeaders()
+    protected function getHeaders()
     {
         return $this->headers;
     }
@@ -55,7 +55,7 @@ trait Response
     /**
      * @return array
      */
-    public function getErrors()
+    protected function getErrors()
     {
         return $this->errors;
     }
