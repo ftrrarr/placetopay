@@ -90,6 +90,14 @@ class Authentication
     /**
      * @return string
      */
+    protected function getPlainTranKey()
+    {
+        return $this->plainTranKey;
+    }
+
+    /**
+     * @return string
+     */
     protected function getSeed()
     {
         return $this->seed;
