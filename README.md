@@ -13,7 +13,7 @@ SDK para los mecanismos AIM y PSE
 require __DIR__.'/../vendor/autoload.php';
 
 use rad8329\placetopay\AIM;
-use rad8329\placetopay\aim\models\Authentication;
+use rad8329\placetopay\common\models\Authentication;
 use rad8329\placetopay\aim\requests\AuthOnly;
 
 $aim = new AIM(
