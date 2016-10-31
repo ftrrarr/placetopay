@@ -1,8 +1,7 @@
 <?php
 
-namespace rad8329\placetopay\pse\models;
+namespace rad8329\placetopay\common\models;
 
-use rad8329\placetopay\common\models\ArrayOfAttribute;
 use rad8329\placetopay\common\traits\SmartObject;
 
 /**
@@ -10,6 +9,7 @@ use rad8329\placetopay\common\traits\SmartObject;
  *
  * @property string $login
  * @property string $tranKey
+ * @property string $plainTranKey
  * @property string $seed
  * @property ArrayOfAttribute $additional
  */
@@ -30,6 +30,11 @@ class Authentication
     /**
      * @var string
      */
+    private $plainTranKey;
+
+    /**
+     * @var string
+     */
     private $seed;
 
     /**
@@ -40,8 +45,8 @@ class Authentication
     /**
      * Authentication constructor.
      *
-     * @param string           $login
-     * @param string           $tranKey
+     * @param string $login
+     * @param string $tranKey
      * @param ArrayOfAttribute $additional
      */
     public function __construct($login, $tranKey, ArrayOfAttribute $additional = null)
@@ -49,6 +54,7 @@ class Authentication
         $this->login = $login;
         $this->seed = date('c');
         $this->tranKey = $this->generateHashKey($tranKey);
+        $this->plainTranKey = $tranKey;
 
         if ($additional) {
             $this->additional = $additional;
@@ -62,7 +68,7 @@ class Authentication
      */
     private function generateHashKey($tranKey)
     {
-        return sha1($this->seed.$tranKey, false);
+        return sha1($this->seed . $tranKey, false);
     }
 
     /**
