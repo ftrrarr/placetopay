@@ -1,13 +1,12 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/utils.php';
+require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/utils.php';
 
-$config = require __DIR__ . '/config/main.php';
+$config = require __DIR__.'/config/main.php';
 
 use rad8329\placetopay\AIM;
 use rad8329\placetopay\common\models\Authentication;
-use rad8329\placetopay\aim\requests\AuthOnly;
 
 $aim = new AIM(
     new Authentication($config['login'], $config['tranKey']),

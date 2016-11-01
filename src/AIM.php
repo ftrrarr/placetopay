@@ -15,6 +15,7 @@ class AIM extends Controller
      * @param AuthOnlyRequest $request
      *
      * @return AuthOnlyResponse
+     *
      * @throws \GuzzleHttp\Exception\ClientException
      */
     public function createTransaction(AuthOnlyRequest $request)
@@ -42,10 +43,11 @@ class AIM extends Controller
         );
     }
 
-
     /**
      * @param int $transactionID
+     *
      * @return Transaction
+     *
      * @throws \SoapFault
      */
     public function getTransactionInformation($transactionID)

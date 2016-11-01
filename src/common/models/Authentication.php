@@ -45,8 +45,8 @@ class Authentication
     /**
      * Authentication constructor.
      *
-     * @param string $login
-     * @param string $tranKey
+     * @param string           $login
+     * @param string           $tranKey
      * @param ArrayOfAttribute $additional
      */
     public function __construct($login, $tranKey, ArrayOfAttribute $additional = null)
@@ -68,7 +68,7 @@ class Authentication
      */
     private function generateHashKey($tranKey)
     {
-        return sha1($this->seed . $tranKey, false);
+        return sha1($this->seed.$tranKey, false);
     }
 
     /**
