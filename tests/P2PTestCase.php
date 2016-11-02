@@ -4,6 +4,9 @@ namespace rad8329\placetopay\tests;
 
 class P2PTestCase extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var array
+     */
     protected static $config;
 
     /**
