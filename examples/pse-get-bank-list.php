@@ -3,7 +3,7 @@
 require __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/utils.php';
 
-$config = require __DIR__.'/config/main.php';
+$config = require __DIR__.'/../tests/fixtures/main.php';
 
 use rad8329\placetopay\PSE;
 use rad8329\placetopay\common\models\Authentication;

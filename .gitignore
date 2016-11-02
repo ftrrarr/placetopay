@@ -2,3 +2,4 @@
 /.idea
 /composer.lock
 /examples/config/main-local.php
+/tests/fixtures/main-local.php
