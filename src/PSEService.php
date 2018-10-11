@@ -144,7 +144,7 @@ class PSEService
     /**
      * @return Authentication
      */
-    protected function getAuth(): Authentication
+    public function getAuth(): Authentication
     {
         return $this->auth;
     }
@@ -152,7 +152,7 @@ class PSEService
     /**
      * @return string
      */
-    protected function getWsdl(): string
+    public function getWsdl(): string
     {
         return $this->wsdl;
     }

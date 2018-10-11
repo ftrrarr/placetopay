@@ -142,7 +142,7 @@ class ArrayOfTransaction implements \ArrayAccess, \Iterator, \Countable
     /**
      * @return Transaction[]
      */
-    protected function getItem()
+    public function getItem()
     {
         return $this->item;
     }

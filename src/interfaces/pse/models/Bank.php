@@ -29,7 +29,7 @@ class Bank extends Arrayable
     /**
      * @return string
      */
-    protected function getCode()
+    public function getCode()
     {
         return $this->code;
     }
@@ -37,7 +37,7 @@ class Bank extends Arrayable
     /**
      * @return string
      */
-    protected function getName()
+    public function getName()
     {
         return $this->name;
     }

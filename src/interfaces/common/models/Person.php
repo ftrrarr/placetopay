@@ -105,7 +105,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getDocument()
+    public function getDocument()
     {
         return $this->document;
     }
@@ -113,7 +113,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getDocumentType()
+    public function getDocumentType()
     {
         return $this->documentType;
     }
@@ -121,7 +121,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getFirstName()
+    public function getFirstName()
     {
         return $this->firstName;
     }
@@ -129,7 +129,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getLastName()
+    public function getLastName()
     {
         return $this->lastName;
     }
@@ -137,7 +137,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getCompany()
+    public function getCompany()
     {
         return $this->company;
     }
@@ -145,7 +145,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getEmailAddress()
+    public function getEmailAddress()
     {
         return $this->emailAddress;
     }
@@ -153,7 +153,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getCity()
+    public function getCity()
     {
         return $this->city;
     }
@@ -161,7 +161,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getProvince()
+    public function getProvince()
     {
         return $this->province;
     }
@@ -169,7 +169,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getPhone()
+    public function getPhone()
     {
         return $this->phone;
     }
@@ -177,7 +177,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getCountry()
+    public function getCountry()
     {
         return $this->country;
     }
@@ -185,7 +185,7 @@ class Person extends Arrayable
     /**
      * @return string
      */
-    protected function getMobile()
+    public function getMobile()
     {
         return $this->mobile;
     }

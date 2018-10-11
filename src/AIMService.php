@@ -172,7 +172,7 @@ class AIMService
     /**
      * @return Authentication
      */
-    protected function getAuth(): Authentication
+    public function getAuth(): Authentication
     {
         return $this->auth;
     }
@@ -180,7 +180,7 @@ class AIMService
     /**
      * @return string
      */
-    protected function getWsdl(): string
+    public function getWsdl(): string
     {
         return $this->wsdl;
     }
@@ -188,7 +188,7 @@ class AIMService
     /**
      * @return string
      */
-    protected function getEndpoint(): string
+    public function getEndpoint(): string
     {
         return $this->endpoint;
     }

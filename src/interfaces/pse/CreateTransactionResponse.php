@@ -97,7 +97,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getBankURL()
+    public function getBankURL()
     {
         return $this->bankURL;
     }
@@ -105,7 +105,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getTrazabilityCode()
+    public function getTrazabilityCode()
     {
         return $this->trazabilityCode;
     }
@@ -113,7 +113,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getBankCurrency()
+    public function getBankCurrency()
     {
         return $this->bankCurrency;
     }
@@ -121,7 +121,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return int
      */
-    protected function getBankFactor()
+    public function getBankFactor()
     {
         return $this->bankFactor;
     }
@@ -129,7 +129,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getTransactionCycle()
+    public function getTransactionCycle()
     {
         return $this->transactionCycle;
     }
@@ -137,7 +137,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getTransactionID()
+    public function getTransactionID()
     {
         return $this->transactionID;
     }
@@ -145,7 +145,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getSessionID()
+    public function getSessionID()
     {
         return $this->sessionID;
     }
@@ -153,7 +153,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getReturnCode()
+    public function getReturnCode()
     {
         return $this->returnCode;
     }
@@ -161,7 +161,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getResponseCode()
+    public function getResponseCode()
     {
         return $this->responseCode;
     }
@@ -169,7 +169,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getResponseReasonCode()
+    public function getResponseReasonCode()
     {
         return $this->responseReasonCode;
     }
@@ -177,7 +177,7 @@ class CreateTransactionResponse extends Response
     /**
      * @return string
      */
-    protected function getResponseReasonText()
+    public function getResponseReasonText()
     {
         return $this->responseReasonText;
     }

@@ -143,7 +143,7 @@ class ArrayOfAttribute implements \ArrayAccess, \Iterator, \Countable
     /**
      * @return Attribute[]
      */
-    protected function getItem()
+    public function getItem()
     {
         return $this->item;
     }
