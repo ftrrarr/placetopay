@@ -13,9 +13,11 @@ abstract class Response extends Arrayable implements ResponseInterface
     private $headers;
 
     /**
+     * Response constructor.
      * @param array $headers
+     * @param array $data
      */
-    public function __construct(array $headers)
+    public function __construct(array $headers, array $data = [])
     {
         $this->headers = $headers;
     }
