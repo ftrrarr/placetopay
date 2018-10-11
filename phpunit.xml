@@ -12,6 +12,9 @@
     <testsuites>
         <testsuite name="PlaceToPay SDK Test Suite">
             <directory>./tests</directory>
+            <directory>./tests/interfaces/aim</directory>
+            <directory>./tests/interfaces/pse</directory>
+            <directory>./tests/interfaces/common/models</directory>
         </testsuite>
     </testsuites>
     <filter>

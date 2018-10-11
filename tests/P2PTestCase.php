@@ -15,7 +15,7 @@ class P2PTestCase extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         if (!self::$config) {
-            self::$config = require_once __DIR__.'/fixtures/main.php';
+            self::$config = require_once __DIR__ . '/fixtures/cofig.php';
         }
 
         parent::setUp();
