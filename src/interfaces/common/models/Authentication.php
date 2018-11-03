@@ -5,6 +5,8 @@ namespace rad8329\placetopay\interfaces\common\models;
 use rad8329\placetopay\interfaces\common\ReachableAttributesTrait;
 
 /**
+ * Immutable class
+ *
  * @property string $login
  * @property string $tranKey
  * @property string $plainTranKey

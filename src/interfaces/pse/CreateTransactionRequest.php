@@ -11,6 +11,8 @@ use rad8329\placetopay\interfaces\common\Validation;
 use rad8329\placetopay\interfaces\common\models\Person;
 
 /**
+ * Immutable class
+ *
  * @see https://dev.placetopay.com/web/pse/consideraciones-para-pse-2/tipos-de-datos-o-estructuras-2/psetransactionrequest/
  *
  * @property-read string $bankCode

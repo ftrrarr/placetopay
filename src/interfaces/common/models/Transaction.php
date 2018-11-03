@@ -7,6 +7,8 @@ use rad8329\placetopay\interfaces\common\Arrayable;
 use rad8329\placetopay\interfaces\common\ConfigurableObjectTrait;
 
 /**
+ * Immutable class
+ *
  * @property-read int $transactionID
  * @property-read string $sessionID
  * @property-read string $reference

@@ -7,6 +7,8 @@ use rad8329\placetopay\interfaces\common\ConfigurableObjectTrait;
 use rad8329\placetopay\interfaces\common\Response;
 
 /**
+ * Immutable class
+ *
  * @see https://dev.placetopay.com/web/pse/consideraciones-para-pse-2/tipos-de-datos-o-estructuras-2/psetransactionresponse/
  *
  * @property-read string $returnCode

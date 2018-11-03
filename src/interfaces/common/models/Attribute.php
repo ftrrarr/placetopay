@@ -6,6 +6,11 @@ use rad8329\placetopay\exceptions\UnknownPropertyException;
 use rad8329\placetopay\interfaces\common\ConfigurableObjectTrait;
 use rad8329\placetopay\interfaces\common\ReachableAttributesTrait;
 
+/**
+ * Immutable class
+ *
+ * @package rad8329\placetopay\interfaces\common\models
+ */
 class Attribute
 {
     use ReachableAttributesTrait;

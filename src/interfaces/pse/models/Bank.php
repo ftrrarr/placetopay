@@ -5,6 +5,8 @@ namespace rad8329\placetopay\interfaces\pse\models;
 use rad8329\placetopay\interfaces\common\Arrayable;
 
 /**
+ * Immutable class
+ *
  * @property-read string $code
  * @property-read string $name
  */

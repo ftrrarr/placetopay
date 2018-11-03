@@ -10,6 +10,8 @@ use rad8329\placetopay\interfaces\common\Request as CommonRequest;
 
 
 /**
+ * Immutable class
+ *
  * @see https://dev.placetopay.com/web/tarjeta-de-credito/ (Matriz de campos por tipo de operación)
  *
  * @property-read string $x_version

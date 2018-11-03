@@ -9,6 +9,8 @@ use rad8329\placetopay\interfaces\common\ConfigurableObjectTrait;
 use rad8329\placetopay\interfaces\common\Validation;
 
 /**
+ * Immutable class
+ *
  * @see https://dev.placetopay.com/web/pse/consideraciones-para-pse-2/tipos-de-datos-o-estructuras-2/person/
  *
  * @property-read string $document

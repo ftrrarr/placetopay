@@ -5,6 +5,8 @@ namespace rad8329\placetopay\interfaces\aim\models;
 use rad8329\placetopay\interfaces\common\Arrayable;
 
 /**
+ * Immutable class
+ *
  * @property-read int $x_response_code
  * @property-read string $x_response_subcode
  * @property-read string $x_response_reason_code
