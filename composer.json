@@ -1,5 +1,6 @@
 {
   "name": "rad8329/placetopay",
+  "version": "1.0.0",
   "description": "API de integración con la plataforma de pagos PlaceToPay",
   "license": "MIT",
   "authors": [
