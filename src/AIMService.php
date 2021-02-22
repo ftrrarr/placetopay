@@ -78,7 +78,7 @@ class AIMService
     {
         $client = new Client();
         $responseResource = $client->post($this->endpoint, [
-            'body' => $request->toArray(),
+            'form_params' => $request->toArray(),
         ]);
 
         $headers = $responseResource->getHeaders();
